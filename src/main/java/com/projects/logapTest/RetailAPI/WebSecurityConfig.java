@@ -12,7 +12,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     http
       .requiresChannel()
       .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
-      .requiresInsecure();
+      .requiresInsecure()
+      .and()
+      .csrf()
+      .disable();
 
   }
 }
