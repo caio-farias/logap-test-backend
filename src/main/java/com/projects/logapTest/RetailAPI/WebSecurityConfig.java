@@ -14,7 +14,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
       .requiresInsecure()
       .and()
-      .cors();
+      .csrf()
+      .disable();
 
   }
 }
