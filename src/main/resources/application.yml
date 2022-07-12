@@ -1,15 +1,12 @@
-server:
-  port: 8080
-
 spring:
   jpa:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/logap-db
-    username: postgres
-    password: logap-test
+    url: "${JDBC.DATASOURCE.URL}"
+    username: "${POSTGRES_USERNAME}"
+    password: "${POSTGRES_PASSWORD}"
     driverClassName: org.postgresql.Driver
