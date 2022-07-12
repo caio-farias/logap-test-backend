@@ -19,6 +19,6 @@ public class CorsConfig implements WebMvcConfigurer {
       "GET",
       "DELETE",
       "OPTIONS"
-    ).allowedOrigins("*");
+    );
   }
 }
