@@ -10,13 +10,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     http
-      .csrf()
-      .disable()
-      .cors()
-      .and()
       .requiresChannel()
       .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
-      .requiresInsecure();
+      .requiresInsecure()
+      .and()
+      .csrf()
+      .disable();
+
   }
 }
 

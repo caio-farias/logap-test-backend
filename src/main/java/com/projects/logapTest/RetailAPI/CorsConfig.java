@@ -19,14 +19,10 @@ public class CorsConfig implements WebMvcConfigurer {
       "GET",
       "DELETE",
       "OPTIONS"
-    ).allowedOrigins("*");
-
-      /*.exposedHeaders("X-Total-Count",
-                      "Location",
-                      "Access-Control-Allow-Origin"
-      )
-      .allowCredentials(false)
-      .maxAge(6000);*/
+    ).allowedOrigins("*").exposedHeaders(
+      "X-Total-Count",
+      "Location",
+      "Access-Control-Allow-Origin"
+    );
   }
-
 }
