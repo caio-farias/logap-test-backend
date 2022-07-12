@@ -18,6 +18,7 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
@@ -52,7 +53,7 @@ public class ProductCategoryService {
     ).map((productCategory) -> ProductCategory
                                  .builder()
                                  .name(productCategory)
-                                 .build()).toList();
+                                 .build()).collect(Collectors.toList());
     productCategoryRepository.saveAll(initialProductCategoriesList);
   }
 
