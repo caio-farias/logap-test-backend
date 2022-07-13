@@ -4,6 +4,9 @@
   
 ## Endpoints
 
+### Tarefa 1 (sem interface)
+  - Ler primeira vogal não repetida que tem como antecessor uma consoante que é antecessora à vogal
+* Endpoint (GET): https://logap-test-backend.herokuapp.com/task-1/STRING
 ### Categoria de Produto
 
 - Cadastrar categoria de produtos
